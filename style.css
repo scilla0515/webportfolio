@@ -1,0 +1,22 @@
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #fefefe;
+}
+header, section, footer {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+header {
+  background: #f3f3f3;
+  text-align: center;
+}
+.project {
+  background: #eee;
+  margin: 10px 0;
+  padding: 10px;
+}
