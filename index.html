@@ -2,6 +2,8 @@
 <html lang="en">
 <!DOCTYPE html>
 <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,90 +14,106 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display&display=swap" rel="stylesheet" />
-
-
   <style>
     * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+      box-sizing: border-box;
+    }
 
-body {
-  font-family: 'DM Serif Display', serif;
-  background-color: #fdfaf7;
-  color: #3e2f25;
-  line-height: 1.6;
-}
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fdfaf6;
+      color: #5e4033;
+    }
 
-/* Header */
-.header {
-  background-color: #f3eae2;
-  padding: 30px 20px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
-}
+    .header {
+      background-color: #f1ece6;
+      padding: 20px;
+      text-align: center;
+    }
 
-.brand-name {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 54px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #6e4b3a;
-}
+    .brand-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 48px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin: 0;
+      color: #5e4033;
+    }
 
-/* Navigation */
-.topnav {
-  display: flex;
-  justify-content: center;
-  background-color: #e8dfd6;
-  border-bottom: 1px solid #ddd0c6;
-}
+    .topnav {
+      overflow: hidden;
+      background-color: #6c5849;
+      display: flex;
+      justify-content: center;
+    }
 
-.topnav a {
-  color: #5e4a3a;
-  padding: 16px 20px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
+    .topnav a {
+      display: block;
+      color: #fff;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-.topnav a:hover {
-  background-color: #d7c9bb;
-  color: #2c1f16;
-  border-radius: 6px;
-}
+    .topnav a:hover {
+      background-color: #c9b7a6;
+      color: #fff;
+    }
 
-/* Main Content */
-.main {
-  padding: 60px 20px;
-  text-align: center;
-}
+    /* Hero Banner */
+    .hero {
+      background-color: #efe7de;
+      padding: 100px 20px;
+      text-align: center;
+      background-image: linear-gradient(to bottom right, #f3eae2, #e8dfd6);
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    }
 
-.main h2 {
-  font-size: 32px;
-  margin-bottom: 10px;
-  color: #5e4033;
-}
+    .hero-text h2 {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 56px;
+      color: #5e4033;
+      margin-bottom: 10px;
+    }
 
-.main p {
-  max-width: 600px;
-  margin: auto;
-  color: #5f5045;
-}
+    .hero-text p {
+      font-size: 20px;
+      color: #6c5849;
+      margin-bottom: 30px;
+    }
 
-/* Footer */
-.footer {
-  background-color: #f0e7dc;
-  text-align: center;
-  padding: 15px;
-  font-size: 14px;
-  color: #786455;
-  border-top: 1px solid #dbcfc2;
-}
+    .hero-btn {
+      display: inline-block;
+      padding: 14px 28px;
+      background-color: #c9b7a6;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 30px;
+      transition: background-color 0.3s ease;
+      font-size: 16px;
+    }
+
+    .hero-btn:hover {
+      background-color: #bda593;
+    }
+
+    .main {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .footer {
+      background-color: #f1ece6;
+      text-align: center;
+      padding: 10px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
   </style>
 </head>
 <body>
@@ -105,13 +123,23 @@ body {
   </div>
 
   <div class="topnav">
-    <a href="#">About</a>
+    <a href="#about">About</a>
     <a href="#">Projects</a>
     <a href="#">Contact</a>
   </div>
 
-  <div class="main">
-    <h2>Welcome to My Portfolio</h2>
+  <!-- Hero Banner -->
+  <div class="hero">
+    <div class="hero-text">
+      <h2>Welcome to My Portfolio</h2>
+      <p>Discover my work, style, and creativity as a designer.</p>
+      <a href="#about" class="hero-btn">Learn More About Me</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main" id="about">
+    <h2>About Me</h2>
     <p>This is where you’ll learn more about my work, skills, and current projects.</p>
   </div>
 
@@ -121,5 +149,6 @@ body {
 
 </body>
 </html>
+
 
 
