@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!DOCTYPE html>
-<html lang="en">
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,133 +13,144 @@
   <style>
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
       background-color: #fdfaf6;
       color: #5e4033;
     }
 
+    /* Navigation Bar */
+    .navbar {
+      width: 100%;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fdfaf6;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar .logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 32px;
+      color: #5e4033;
+      text-decoration: none;
+    }
+
+    .navbar-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .navbar-links a {
+      text-decoration: none;
+      color: #5e4033;
+      font-weight: bold;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .navbar-links a:hover {
+      color: #6c5849;
+    }
+
+    /* Header Content */
     .header {
-      background-color: #f1ece6;
-      padding: 20px;
+      padding: 40px 20px 20px;
       text-align: center;
     }
 
     .brand-name {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: 48px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin: 0;
-      color: #5e4033;
+      font-size: 72px;
+      letter-spacing: 1px;
+      text-transform: lowercase;
+      color: #333;
     }
 
-    .topnav {
-      overflow: hidden;
-      background-color: #6c5849;
-      display: flex;
-      justify-content: center;
+    .tagline {
+      font-size: 18px;
+      margin-top: 10px;
+      color: #555;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    .topnav a {
-      display: block;
-      color: #fff;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .topnav a:hover {
-      background-color: #c9b7a6;
-      color: #fff;
-    }
-
-    /* Hero Banner */
+    /* Hero Section */
     .hero {
-      background-color: #efe7de;
-      padding: 100px 20px;
       text-align: center;
-      background-image: linear-gradient(to bottom right, #f3eae2, #e8dfd6);
-      border-radius: 0 0 20px 20px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+      margin-top: 30px;
     }
 
-    .hero-text h2 {
-      font-family: "Bebas Neue", sans-serif;
-      font-size: 56px;
-      color: #5e4033;
-      margin-bottom: 10px;
+    .hero img {
+      width: 300px;
+      max-width: 90%;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     }
 
-    .hero-text p {
-      font-size: 20px;
+    .hero-link {
+      display: block;
+      margin-top: 20px;
+      font-size: 16px;
       color: #6c5849;
-      margin-bottom: 30px;
-    }
-
-    .hero-btn {
-      display: inline-block;
-      padding: 14px 28px;
-      background-color: #c9b7a6;
-      color: #fff;
       text-decoration: none;
       font-weight: bold;
-      border-radius: 30px;
-      transition: background-color 0.3s ease;
-      font-size: 16px;
     }
 
-    .hero-btn:hover {
-      background-color: #bda593;
+    .hero-link:hover {
+      text-decoration: underline;
     }
 
-    .main {
-      padding: 40px 20px;
-      text-align: center;
-    }
-
+    /* Footer */
     .footer {
       background-color: #f1ece6;
       text-align: center;
       padding: 10px;
-      position: relative;
-      bottom: 0;
-      width: 100%;
+      margin-top: 60px;
     }
   </style>
 </head>
 <body>
 
-  <div class="header">
-    <h1 class="brand-name">Priscilla Boateng | Web Designer</h1>
-  </div>
-
-  <div class="topnav">
-    <a href="#about">About</a>
-    <a href="#">Projects</a>
-    <a href="#">Contact</a>
-  </div>
-
-  <!-- Hero Banner -->
-  <div class="hero">
-    <div class="hero-text">
-      <h2>Welcome to My Portfolio</h2>
-      <p>Discover my work, style, and creativity as a designer.</p>
-      <a href="#about" class="hero-btn">Learn More About Me</a>
+  <!-- Navigation -->
+  <div class="navbar">
+    <a href="#" class="logo">Priscilla</a>
+    <div class="navbar-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
     </div>
   </div>
 
+  <!-- Header -->
+  <div class="header">
+    <h1 class="brand-name">Priscilla Boateng</h1>
+    <p class="tagline">A web designer inspired by beauty, simplicity, and strong creative accents.</p>
+  </div>
 
+  <!-- Hero Image -->
+  <div class="hero">
+    <img src="IMG_2444.jpg" alt="Hero Image" />
+    <a href="#about" class="hero-link">View My Portfolio</a>
+  </div>
+
+  <!-- Footer -->
   <div class="footer">
     &copy; 2025 Priscilla Boateng. All rights reserved.
   </div>
 
 </body>
 </html>
+
+
 
 
 
