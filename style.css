@@ -1,1 +1,123 @@
+/* Reset and Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Bellefair", serif;
+  background-color: #fdfaf6;
+  color: #5e4033;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Navigation Bar */
+.navbar {
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fdfaf6;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 32px;
+  color: #5e4033;
+  text-decoration: none;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 30px;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #5e4033;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #6c5849;
+}
+
+/* Header Content */
+.header {
+  padding: 40px 20px 20px;
+  text-align: center;
+}
+
+.brand-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 72px;
+  letter-spacing: 1px;
+  text-transform: lowercase;
+  color: #333;
+}
+
+.bellefair-regular {
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tagline {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #555;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.hero img {
+  width: 300px;
+  max-width: 90%;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hero-link {
+  display: block;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #6c5849;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero-link:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+  background-color: #f1ece6;
+  text-align: center;
+  padding: 10px;
+  margin-top: 60px;
+  font-size: 14px;
+}
 
