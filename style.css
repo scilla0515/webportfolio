@@ -1,3 +1,4 @@
+/* Reset default margins and paddings */
 * {
     margin: 0;
     padding: 0;
@@ -10,64 +11,80 @@ body {
     font-family: 'Helvetica Neue', sans-serif;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 20px;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
     background-color: #111;
+    font-weight: 300;
 }
 
-.navbar nav a {
-    margin-left: 20px;
-    color: white;
-    text-decoration: none;
-    font-weight: 300;
-    font-size: 14px;
+.logo {
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .hero {
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
-    text-align: center;
-    margin: 100px 20px 50px;
+    justify-content: center;
+    padding: 80px 40px;
+    gap: 80px;
 }
 
 .hero-text h1 {
-    font-size: 48px;
-    line-height: 1.2;
+    font-size: 64px;
+    line-height: 1.1;
+    font-weight: 300;
 }
 
 .hero-text span {
     font-weight: bold;
 }
 
+.subtitle {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 300;
+    color: gray;
+}
+
 .hero-image img {
-    margin-top: 30px;
-    width: 200px;
+    width: 400px;
     border-radius: 10px;
 }
 
 .gallery {
-    padding: 50px 40px;
+    padding: 80px 40px;
 }
 
-.gallery h2 {
-    font-size: 36px;
+.gallery-title {
+    font-size: 48px;
     margin-bottom: 40px;
+    text-align: left;
 }
 
 .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    overflow-x: auto;
     gap: 30px;
+    padding-bottom: 20px;
+}
+
+.gallery-item {
+    min-width: 250px;
 }
 
 .gallery-item img {
     width: 100%;
-    height: auto;
     border-radius: 10px;
 }
 
