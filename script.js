@@ -1,2 +1,45 @@
+const bibleApiUrl = 'https://beta.ourmanna.com/api/v1/get/?format=text';
+const weatherApiKey = '64a5fdf0c96b95dd4d04b5a65ecff242'; //
 
-console.log("Welcome to Priscilla's Web Portfolio!");
+function showBible() {
+  document.getElementById('bible-section').classList.remove('hidden');
+  document.getElementById('weather-section').classList.add('hidden');
+
+  fetch(bibleApiUrl)
+    .then(response => response.text())
+    .then(verse => {
+      document.getElementById('bible-verse').innerText = verse;
+    })
+    .catch(error => {
+      document.getElementById('bible-verse').innerText = 'Failed to load verse.';
+    });
+}
+
+function showWeather() {
+  document.getElementById('weather-section').classList.remove('hidden');
+  document.getElementById('bible-section').classList.add('hidden');
+
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(position => {
+      const lat = position.coords.latitude;
+      const lon = position.coords.longitude;
+      const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${weatherApiKey}`;
+
+      fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+          const temp = data.main.temp;
+          const description = data.weather[0].description;
+          const city = data.name;
+          document.getElementById('weather-info').innerText = `The weather in ${city} is ${description} at ${temp}°F.`;
+        })
+        .catch(error => {
+          document.getElementById('weather-info').innerText = 'Failed to load weather.';
+        });
+    }, error => {
+      document.getElementById('weather-info').innerText = 'Location access denied.';
+    });
+  } else {
+    document.getElementById('weather-info').innerText = 'Geolocation not supported.';
+  }
+}
