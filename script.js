@@ -1,4 +1,4 @@
-const weatherApiKey = '64a5fdf0c96b95dd4d04b5a65ecff242'; // Your OpenWeatherMap API key
+const weatherApiKey = 'pweat'; // Your OpenWeatherMap API key
 
 function showWeather() {
   document.getElementById('weather-section').classList.remove('hidden');
