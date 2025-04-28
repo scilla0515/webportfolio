@@ -1,23 +1,7 @@
-const bibleApiUrl = 'https://beta.ourmanna.com/api/v1/get/?format=text';
-const weatherApiKey = '64a5fdf0c96b95dd4d04b5a65ecff242'; //
-
-function showBible() {
-  document.getElementById('bible-section').classList.remove('hidden');
-  document.getElementById('weather-section').classList.add('hidden');
-
-  fetch(bibleApiUrl)
-    .then(response => response.text())
-    .then(verse => {
-      document.getElementById('bible-verse').innerText = verse;
-    })
-    .catch(error => {
-      document.getElementById('bible-verse').innerText = 'Failed to load verse.';
-    });
-}
+const weatherApiKey = '64a5fdf0c96b95dd4d04b5a65ecff242'; // Your OpenWeatherMap API key
 
 function showWeather() {
   document.getElementById('weather-section').classList.remove('hidden');
-  document.getElementById('bible-section').classList.add('hidden');
 
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(position => {
